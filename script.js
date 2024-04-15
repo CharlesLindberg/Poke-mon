@@ -21,9 +21,8 @@ let pokemonCount2 = 1;
 let selectedPokemon1 = null;
 let selectedPokemon2 = null;
 let selectedPokemons = [];
-let progressBar1 = pokemon1Container.querySelectorAll("progress");
-let progressBar2 = pokemon2Container.querySelectorAll("progress");
 let progressElement = document.querySelectorAll("progress");
+let currentPokemons;
 
 // Hämta Pokémon namn till dropdown menyerna
 async function fetchPokemons(url, dropdown, count) {
@@ -286,8 +285,51 @@ function comparePokemons(pokemon1, pokemon2) {
     let statValue1 = pokemon1.stats[stat];
     let statValue2 = pokemon2.stats[stat];
 
-    let progressBarPokemon1 = progressBar1[stat];
-    let progressBarPokemon2 = progressBar2[stat];
+    console.log("statValue1: ", statValue1);
+    console.log("statValue2: ", statValue2);
+
+    let progressBar1 = pokemon1Container.querySelectorAll(".progress");
+    let progressBar2 = pokemon2Container.querySelectorAll(".progress");
+
+    let stat1GreaterThanStat2 = statValue1 > statValue2;
+    let stat1LessThanStat2 = statValue1 < statValue2;
+
+    for (let i = 0; i < progressBar1.length; i++) {
+      let progressBarStat1 = progressBar1[i];
+      let progressBarStat2 = progressBar2[i];
+
+      if (stat1GreaterThanStat2) {
+        progressBarStat1.classList.add("green");
+        progressBarStat2.classList.add("red");
+      } else if (stat1LessThanStat2) {
+        progressBarStat1.classList.add("red");
+        progressBarStat2.classList.add("green");
+      } else {
+        // progressBarStat1.classList.add("green");
+        // progressBarStat2.classList.add("green");
+      }
+    }
+
+    // for (let i = 0; i < progressBar1.length; i++) {
+    //   let innerStatValue1 = pokemon1.stats[i];
+    //   let innerStatValue2 = pokemon2.stats[i];
+    //   let progressBarStat1 = progressBar1[i];
+    //   let progressBarStat2 = progressBar2[i];
+
+    //   if (innerStatValue1 > innerStatValue2) {
+    //     progressBarStat1.classList.add("green");
+    //     progressBarStat2.classList.add("red");
+    //   } else if (innerStatValue1 < innerStatValue2) {
+    //     progressBarStat1.classList.add("red");
+    //     progressBarStat2.classList.add("green");
+    //   } else if (innerStatValue1 === innerStatValue2) {
+    //     progressBarStat1.classList.add("green");
+    //     progressBarStat2.classList.add("green");
+    //   }
+    // }
+
+    // let progressBarPokemon1 = progressBar1[stat];
+    // let progressBarPokemon2 = progressBar2[stat];
 
     // let progressBar1 = pokemon1Container.querySelector(
     //   `.${stat.toLowerCase()}ProgressBar`
@@ -302,16 +344,27 @@ function comparePokemons(pokemon1, pokemon2) {
     // let progressBar1 = pokemon1Container.querySelectorAll("progress");
     // let progressBar2 = pokemon2Container.querySelectorAll("progress");
 
-    if (statValue1 > statValue2) {
-      progressBar1.classList.add("green");
-      progressBar2.classList.add("red");
-    } else if (statValue1 < statValue2) {
-      progressBar1.classList.add("red");
-      progressBar2.classList.add("green");
-    } else {
-      progressBar1.classList.add("green");
-      progressBar2.classList.add("green");
-    }
+    // if (statValue1 > statValue2) {
+    //   statValue1.classList.add("green");
+    //   statValue2.classList.add("red");
+    // } else if (statValue1 < statValue2) {
+    //   statValue1.classList.add("red");
+    //   statValue2.classList.add("green");
+    // } else {
+    //   statValue1.classList.add("green");
+    //   statValue2.classList.add("green");
+    // }
+
+    // if (statValue1 > statValue2) {
+    //   progressBar1.classList.add("green");
+    //   progressBar2.classList.add("red");
+    // } else if (statValue1 < statValue2) {
+    //   progressBar1.classList.add("red");
+    //   progressBar2.classList.add("green");
+    // } else {
+    //   progressBar1.classList.add("green");
+    //   progressBar2.classList.add("green");
+    // }
   }
 }
 
@@ -321,5 +374,5 @@ function comparePokemons(pokemon1, pokemon2) {
 // });
 
 console.log(selectedPokemons);
-console.log("Progress bar 1: ", progressBar1);
-console.log("Progress bar 2: ", progressBar2);
+// console.log("Progress bar 1: ", progressBar1);
+// console.log("Progress bar 2: ", progressBar2);
