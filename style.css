@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+main .pokemon1 {
+  border: 1px solid grey;
+  width: 50%;
+  height: 100%;
+}
+main .pokemon2 {
+  border: 1px solid grey;
+  width: 50%;
+  height: 100%;
+}
+main img {
+  width: 80%;
+}
+.green {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.415);
+}
+
+.red {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.458);
+}/*# sourceMappingURL=style.css.map */

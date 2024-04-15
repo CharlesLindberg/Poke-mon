@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+
+  .pokemon1 {
+    border: 1px solid grey;
+    width: 50%;
+    height: 100%;
+  }
+  .pokemon2 {
+    border: 1px solid grey;
+    width: 50%;
+    height: 100%;
+  }
+  img {
+    width: 80%;
+  }
+  .height {
+  }
+
+  .weight {
+  }
+}
+
+.green {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.415);
+}
+
+.red {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.458);
+}
+
+.progress {
+}
