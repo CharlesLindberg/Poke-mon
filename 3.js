@@ -251,6 +251,13 @@ function comparePokemons(pokemon1, pokemon2) {
     pokemon2Container.querySelector(".height").classList.add("green");
   }
 
+  pokemon1.forEach((pokemon) => {
+    console.log(pokemon.stats);
+  });
+
+  pokemon2.forEach((pokemon) => {
+    console.log(pokemon.stats);
+  });
   // Loopa igenom pokemon1 (alltså selectedPokemon1). Det är hela pokemonobjektet. stats är ett obejkt i sig med HP, attack Speed osv.
   for (let stat in pokemon1.stats) {
     let statValue1 = pokemon1.stats[stat];

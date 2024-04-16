@@ -11,7 +11,7 @@ main {
 main .pokemon1 {
   border: 1px solid grey;
   width: 50%;
-  height: 100%;
+  height: 200%;
 }
 main .battlefield {
   width: 50px;
@@ -19,10 +19,12 @@ main .battlefield {
 main .pokemon2 {
   border: 1px solid grey;
   width: 50%;
-  height: 100%;
+  height: 200%;
 }
 main img {
   width: 80%;
+  height: 200px;
+  max-width: 200px;
 }
 progress[value] {
   border-radius: 12px;

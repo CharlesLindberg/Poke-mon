@@ -285,6 +285,7 @@ function comparePokemons(pokemon1, pokemon2) {
     let statValue1 = pokemon1.stats[stat];
     let statValue2 = pokemon2.stats[stat];
 
+    console.log("Stat: ", stat);
     console.log("statValue1: ", statValue1);
     console.log("statValue2: ", statValue2);
 
@@ -295,12 +296,12 @@ function comparePokemons(pokemon1, pokemon2) {
     let stat1LessThanStat2 = statValue1 < statValue2;
 
     // Loopa genom progress-elementen och rensa befintliga klasser
-    for (let progressBarStat1 of progressBar1) {
-      progressBarStat1.classList.remove("redProgress", "greenProgress");
-    }
-    for (let progressBarStat2 of progressBar2) {
-      progressBarStat2.classList.remove("redProgress", "greenProgress");
-    }
+    // for (let progressBarStat1 of progressBar1) {
+    //   progressBarStat1.classList.remove("redProgress", "greenProgress");
+    // }
+    // for (let progressBarStat2 of progressBar2) {
+    //   progressBarStat2.classList.remove("redProgress", "greenProgress");
+    // }
 
     for (let i = 0; i < progressBar1.length; i++) {
       let progressBarStat1 = progressBar1[i];
@@ -313,10 +314,10 @@ function comparePokemons(pokemon1, pokemon2) {
         progressBarStat1.classList.add("redProgress");
         progressBarStat2.classList.add("greenProgress");
       } else {
-        // progressBarStat1.classList.add("green");
-        // progressBarStat2.classList.add("green");
+        progressBarStat1.classList.add("greenProgress");
+        progressBarStat2.classList.add("greenProgress");
       }
-      console.log("progressBarStat1: ", progressBarStat1);
+      // console.log("progressBarStat1: ", progressBarStat1);
     }
 
     // for (let i = 0; i < progressBar1.length; i++) {
