@@ -22,7 +22,7 @@ let selectedPokemon1 = null;
 let selectedPokemon2 = null;
 let selectedPokemons = [];
 let progressElement = document.querySelectorAll("progress");
-let currentPokemons;
+let currentPokemons = [];
 
 // Hämta Pokémon namn till dropdown menyerna
 async function fetchPokemons(url, dropdown, count) {
@@ -103,18 +103,31 @@ function createPokemonInstance(data) {
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 select1.addEventListener("click", async () => {
+  if (currentPokemons.length >= 2) {
+    console.log("Du kan bara välja två Pokemons åt gången.");
+    return; //avbryter funktionen
+  }
   let pokemonIndex = dropDown1.selectedIndex;
   let pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonIndex}`;
   let pokemonData = await fetchPokemonDetails(pokemonUrl);
+  let selectedPokemon = createPokemonInstance(pokemonData);
+
+  currentPokemons.push(selectedPokemon);
+  displayPokemonDetails(selectedPokemon);
+
+  if (currentPokemons.length === 2) {
+    comparePokemons(currentPokemons[0], currentPokemons[1]);
+  }
+
   //   let pokemonInstance = createPokemonInstance(pokemonData);
-  selectedPokemon1 = createPokemonInstance(pokemonData);
-  selectedPokemons[0] = createPokemonInstance(pokemonData);
+  //   selectedPokemon1 = createPokemonInstance(pokemonData);
+  //   selectedPokemons[0] = createPokemonInstance(pokemonData);
 
-  displayPokemonDetails(selectedPokemon1);
+  //   displayPokemonDetails(selectedPokemon1);
 
-  // if (selectedPokemons[0] && selectedPokemons[1]) {
-  //   comparePokemons(selectedPokemons[0], selectedPokemons[1]);
-  // }
+  //   if (selectedPokemons[0] && selectedPokemons[1]) {
+  //     comparePokemons(selectedPokemons[0], selectedPokemons[1]);
+  //   }
 });
 
 // Display pokemon details

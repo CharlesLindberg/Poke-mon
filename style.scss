@@ -13,6 +13,9 @@ main {
     width: 50%;
     height: 100%;
   }
+  .battlefield {
+    width: 50px;
+  }
   .pokemon2 {
     border: 1px solid grey;
     width: 50%;
@@ -28,15 +31,97 @@ main {
   }
 }
 
+progress[value] {
+  border-radius: 12px;
+  display: block;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgb(248, 255, 202);
+
+  border-radius: 12px;
+  border: 0.1px solid black;
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(42, 253, 42);
+  border-radius: 12px;
+}
+
+.redProgress::-webkit-progress-value {
+  background-color: red;
+}
+.greenProgress::-webkit-progress-value {
+  background-color: green;
+}
+
+// .progress {
+//   // display: block;
+//   height: 20px;
+//   background: #5989f2;
+//   color: #06ffee;
+//   border: 1px solid rgba(0, 0, 0, 0.3);
+//   border-radius: 10px;
+// }
+
+// .greenProgress {
+//   background-color: rgb(0, 255, 8);
+//   color: green;
+// }
+
+// .redProgress {
+//   background-color: rgb(255, 0, 0);
+//   color: red;
+// }
+
 .green {
   color: green;
   background-color: rgba(0, 128, 0, 0.415);
+  border-radius: 10px;
 }
 
 .red {
   color: red;
   background-color: rgba(255, 0, 0, 0.458);
+  border-radius: 10px;
 }
 
-.progress {
+.greenProgress {
+  color: green;
+  background-color: green;
 }
+
+.redProgress {
+  color: red;
+  background-color: red;
+}
+
+// .progress {
+//   background: lightgray;
+//   border-radius: 10px;
+// } ::-webkit-progress-value
+
+// .progress {
+
+// }
+
+// |||||||
+
+// progress {
+//   border: 3px dotted black;
+// }
+
+// progress[value] {
+//   border-radius: 12px;
+// }
+
+// progress::-webkit-progress-bar {
+//   background-color: white;
+
+//   border-radius: 12px;
+// }
+
+// progress::-webkit-progress-value {
+//   background-color: rgb(42, 253, 42);
+//   border-radius: 12px;
+// }
