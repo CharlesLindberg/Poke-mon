@@ -1,7 +1,14 @@
+body {
+  background-color: rgba(255, 166, 0, 0.506);
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    padding: 5%;
+  }
 }
 
 main {
@@ -9,17 +16,94 @@ main {
   height: 100vh;
 
   .pokemon1 {
-    border: 1px solid grey;
+    border: 5px solid orange;
+    border-radius: 12px;
     width: 50%;
-    height: 200%;
+    height: fit-content;
+    background-color: rgba(255, 166, 0, 0.712);
+    margin-left: 5%;
+    margin-right: 3%;
+    -webkit-box-shadow: -1px 0px 39px -7px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: -1px 0px 39px -7px rgba(0, 0, 0, 0.57);
+    box-shadow: -1px 0px 39px -7px rgba(0, 0, 0, 0.57);
+
+    select {
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      font-family: "press start 2p";
+      font-size: x-small;
+      background-color: rgb(234, 232, 232);
+    }
+
+    button {
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      margin: 10px;
+      font-family: "press start 2p";
+      font-size: x-small;
+      background-color: lightgray;
+      color: green;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: "press start 2p";
+    }
+    p {
+      font-family: "press start 2p";
+      text-transform: capitalize;
+    }
   }
-  .battlefield {
-    width: 50px;
+  .battleField {
+    width: 25%;
+    font-family: "play";
   }
   .pokemon2 {
-    border: 1px solid grey;
+    border: 5px solid orange;
+    border-radius: 12px;
     width: 50%;
-    height: 200%;
+    height: fit-content;
+    background-color: rgba(255, 166, 0, 0.712);
+    margin-right: 5%;
+    margin-left: 3%;
+    -webkit-box-shadow: -1px 0px 39px -7px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: -1px 0px 39px -7px rgba(0, 0, 0, 0.57);
+    box-shadow: -1px 0px 39px -7px rgba(0, 0, 0, 0.57);
+
+    select {
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      font-family: "press start 2p";
+      font-size: x-small;
+      background-color: rgb(234, 232, 232);
+    }
+
+    button {
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      margin: 10px;
+      font-family: "press start 2p";
+      font-size: x-small;
+      background-color: lightgray;
+      color: green;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-family: "press start 2p";
+    }
+    p {
+      font-family: "press start 2p";
+      text-transform: capitalize;
+    }
   }
   img {
     width: 80%;
@@ -51,10 +135,10 @@ progress::-webkit-progress-value {
 }
 
 .redProgress::-webkit-progress-value {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
 }
 .greenProgress::-webkit-progress-value {
-  background-color: green;
+  background-color: rgb(0, 255, 0);
 }
 
 // .progress {
@@ -79,13 +163,13 @@ progress::-webkit-progress-value {
 .green {
   color: green;
   background-color: rgba(0, 128, 0, 0.415);
-  border-radius: 10px;
+  // border-radius: 10px;
 }
 
 .red {
   color: red;
   background-color: rgba(255, 0, 0, 0.458);
-  border-radius: 10px;
+  // border-radius: 10px;
 }
 
 .greenProgress {
@@ -96,6 +180,20 @@ progress::-webkit-progress-value {
 .redProgress {
   color: red;
   background-color: red;
+}
+
+.orangeProgress::-webkit-progress-value {
+  color: orange;
+  background-color: rgb(253, 253, 4);
+}
+
+ul {
+  width: 100%;
+}
+li {
+  font-family: "play";
+  font-weight: 100;
+  width: 80%;
 }
 
 // .progress {
@@ -127,3 +225,28 @@ progress::-webkit-progress-value {
 //   background-color: rgb(42, 253, 42);
 //   border-radius: 12px;
 // }
+
+.HP1 {
+}
+.HP2 {
+}
+.Attack1 {
+}
+.Attack2 {
+}
+.Defense1 {
+}
+.Defense2 {
+}
+.SpecialAttack1 {
+}
+.SpecialAttack2 {
+}
+.SpecialDefense1 {
+}
+.SpecialDefense2 {
+}
+.Speed1 {
+}
+.Speed2 {
+}
